@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./HomeStyles";
 import getIcon from "./getIcon";
 
-export const WeatherData = ({data}: any) => {
+export const WeatherData: React.FC = ({data}: any) => {
 
     const kelvinToCelsius = (temp: number): number => {
         return Math.trunc(temp - 273);
