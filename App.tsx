@@ -1,5 +1,4 @@
-
-import {ApolloClient, InMemoryCache, ApolloProvider, HttpLink} from "@apollo/client";
+import {ApolloClient, InMemoryCache, ApolloProvider} from "@apollo/client";
 import HomePage from "./Components/HomePage";
 import React from "react";
 
