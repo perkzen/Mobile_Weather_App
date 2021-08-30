@@ -1,21 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import {ApolloClient, InMemoryCache, ApolloProvider, HttpLink} from "@apollo/client";
+import HomePage from "./Components/HomePage";
+import React from "react";
+
+export const App: React.FC = () => {
+    const client = new ApolloClient({
+        cache: new InMemoryCache(),
+        uri: 'https://graphql-weather-api.herokuapp.com/'
+    })
+
+    return (
+        <ApolloProvider client={client}>
+            <HomePage/>
+        </ApolloProvider>
+    );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
+export default App;
