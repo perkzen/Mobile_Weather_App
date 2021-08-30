@@ -1,5 +1,3 @@
-import {Image, ImageBackground} from "react-native";
-import React from "react";
 
 export const getIcon = (title: string): string | undefined => {
     switch (title) {

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {ImageBackground, Pressable, Text, View, TextInput, Alert, Image} from "react-native";
+import {ImageBackground, Text, View, TextInput} from "react-native";
 import {GET_WEATHER_QUERY} from "../graphql/Query";
 import {useLazyQuery} from "@apollo/client";
 import styles from "./HomeStyles";
